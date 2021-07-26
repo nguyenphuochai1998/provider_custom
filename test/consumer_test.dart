@@ -50,7 +50,7 @@ main() {
       ),
     );
     var valueFinder = find.text(valueString);
-    expect(valueFinder, valueFinder);
+    expect(valueFinder, findsOneWidget);
 
     final finder = find.byType(ElevatedButton);
 
@@ -60,7 +60,7 @@ main() {
     await tester.tap(finder);
     await tester.pump();
     valueFinder = find.text(valueStringNext);
-    expect(valueFinder, valueFinder);
+    expect(valueFinder, findsOneWidget);
     // final BuildContext context = tester.element(find.byType(ProviderController));
     // await ProviderController.of(context).getProviderByKey(key: providerKey)!.setValue(valueStringNext);
     // await tester.pump();
